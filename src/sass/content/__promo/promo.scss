@@ -1,0 +1,53 @@
+@use "../../var.scss";
+
+.content__promo {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    position: absolute;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    gap: 4px;
+}
+
+
+.content__promo--one {
+    width: 149px;
+    height: 204px;
+    top: 82px;
+    left: 1057px;
+    background-color: var.$promoOneBckgColor;
+}
+
+.content__promo--two {
+    width: 137px;
+    height: 273px;
+    top: 362px;
+    left: 1143px;
+    background-color: var.$promoTwoBckgColor;
+}
+
+
+/*iPadPro 12.9*/
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .content__promo--one {
+        left: 820px;
+    }
+
+    .content__promo--two {
+        left: 880px;
+    }
+}
+
+
+@media (max-width: 1023px) {
+    .content__promo--one {
+        display: none;
+    }
+    .content__promo--two {
+        display: none;
+    }
+}

@@ -1,0 +1,141 @@
+@use "../var.scss";
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    background-color: #FFFFFF;
+}
+
+.header__logo {
+    font-family: var.$fontBold;
+    font-size: 24px;
+    line-height: 100%;
+    color: var.$text-color-black;
+}
+
+
+.header__link {
+
+    text-decoration: none;
+    font-family: var.$fontBold;
+    font-size: 10px;
+    line-height: 100%;
+    color: var.$text-color-grey;
+    text-transform: uppercase;
+
+}
+
+.header__link--active {
+    font-family: Montserrat-Black;
+    color: var.$text-color-black;
+}
+
+
+.header__link--basket {
+    position: relative;
+}
+
+.header__container {
+    display: flex;
+
+}
+
+.header__container--body {
+    width: 1120px;
+    height: 116px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container--icons {
+    width: 121px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__container--icon-basket {
+    display: none;
+    width: 13px;
+    height: 13px;
+    background-color: #FF353A;
+    color: #FFFFFF;
+    position: absolute;
+    top: 8px;
+    left: 3.84px;
+    border: none;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat-Medium;
+    font-size: 10px;
+}
+
+.header__container--basket-nav {
+    display: none;
+    width: 14px;
+    height: 14px;
+    background-color: #5C6A79;
+    color: #FFFFFF;
+    position: absolute;
+    top: 11.5px;
+    left: 130px;
+    border: none;
+    border-radius: 4px;
+    justify-content: center;
+    align-items: center;
+    font-family: Montserrat-Medium;
+    font-size: 10px;
+}
+
+
+@media (max-width: 1023px) {
+    .header__container--icons {
+        display: none;
+    }
+
+    .header__link--nav {
+        display: block;
+        width: 200px;
+        height: 40px;
+        background-color: #FFFFFF;
+        border: 1px solid #5C6A79;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*iPadPro 12.9*/
+@media (min-width: 1024px) and (max-width: 1439px) {
+    .header__container--body {
+        width: 960px;
+    }
+}
+/*iPad mini*/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .header__container--body {
+        width: 768px;
+    }
+    
+}
+/*iPhone 11 Pro Max */
+@media (min-width: 414px) and (max-width: 767px) {
+
+   .header__container--body {
+        width: 413px;
+    }
+
+}
+/*iPhone SE */
+@media (min-width: 0px) and (max-width: 413px) {
+    
+    .header__container--body {
+        width: 288px;
+    }
+
+}

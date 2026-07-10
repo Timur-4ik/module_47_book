@@ -1,0 +1,57 @@
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    width: 1440px;
+    display: flex;
+    margin: auto;
+    position: relative;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    overflow-x: scroll;
+}
+
+
+
+
+/*iPadPro 12.9*/
+
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .body {
+        width: 1024px;
+    }
+    
+}
+
+/*iPad mini*/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+    .body {
+        width: 768px;
+    }
+}
+
+
+/*iPhone 11 Pro Max */
+
+@media (min-width: 414px) and (max-width: 767px) {
+
+    .body {
+        width: 414px;
+    }
+
+}
+
+/*iPhone SE */
+@media (min-width: 0px) and (max-width: 413px) {
+
+    .body {
+        width: 320px;
+    }
+}

@@ -1,0 +1,198 @@
+@use "../var.scss";
+
+.content {
+    width: 1120px;
+    margin-top: 119px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+
+.content__marker {
+    width: 12px;
+    height: 12px;
+    border: none;
+    background-color: #EFEEF6;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.content__marker--active {
+    background-color: #9E98DC;
+}
+
+.content__img {
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.content__link {
+    display: block;
+    text-decoration: none;
+    
+}
+
+.content__text {
+    color: var.$text-color-black;
+}
+.content__text--promo {
+
+    font-family: var.$fontBold;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+
+
+
+.loader {
+        position: fixed;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+    display: none;
+}
+
+ .animation {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #ccc;
+    border-top: 5px solid #333;
+    border-radius: 50%;
+    animation: css-animation-spin 1s linear infinite;
+ }
+
+ .content__container--button {
+    width: 100%;
+    justify-content: center;
+}
+
+
+.content__categories {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 23px;
+}
+
+.content__item {
+    list-style: none;
+    font-family: Montserrat-Medium;
+    font-size: 12px;
+    color: var.$text-color-grey;
+    display: flex;
+    cursor: pointer;
+}
+
+.content__item--active {
+    list-style: none;
+    font-family: Montserrat-Bold;
+    font-size: 16px;
+    color: var.$text-color-black;
+    gap: 14px;
+    position: relative;
+}
+
+
+.content__categories > .content__item--active::before {
+    content: "\25CF";
+    color: #756AD3;
+    position: absolute;
+    top: -1px;
+    left: -20px;
+}
+
+@keyframes css-animation-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+
+
+/*iPadPro 12.9*/
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .content {
+        width: 960px;
+    
+    }
+
+}
+
+/*iPad mini*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .content {
+        width: 768px;
+    }
+
+    .content__categories {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .content__categories > .content__item--active::before {
+        content: none;
+
+}
+
+}
+
+/*iPhone 11 Pro Max */
+@media (min-width: 414px) and (max-width: 767px) {
+    
+    .content {
+        width: 414px;
+    }
+
+    .content__categories {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .content__categories > .content__item--active::before {
+        content: none;
+
+    }
+}
+
+/*iPhone SE */
+@media (min-width: 0px) and (max-width: 413px) {
+
+    .content {
+        width: 288px;
+    }
+
+    .content__categories {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .content__categories > .content__item--active::before {
+        content: none;
+
+    }
+
+}

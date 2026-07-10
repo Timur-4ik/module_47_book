@@ -1,0 +1,131 @@
+@use "../../var.scss";
+
+
+.content__container {
+    display: flex;
+}
+
+.content__container--boks-and-categories {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.content__container--img-slider {
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.content__container--markers {
+    margin-top: 17px;
+    width: 56px;
+    height: 12px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.content__container--categories {
+    margin-top: 151px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: start;
+    position: relative;
+}
+.content__container--bgr-categories {
+    position: absolute;
+    background-color: #EFEEF6;
+    width: calc(100% + 240px);
+    height: calc(100% + 120px);
+    z-index: -3;
+}
+
+
+.content__container--book-cards {
+    width: 924px;
+    min-height: 1092px;
+    margin-top: 151px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    align-self: self-end;
+    flex-wrap: wrap;
+    row-gap: 96px;
+    z-index: 2;
+}
+
+
+/*iPadPro 12.9*/
+@media (min-width: 1024px) and (max-width: 1439px) {
+
+    .content__container--book-cards {
+        width: 830px;
+        row-gap: 30px;
+        margin-top: 100px;
+    }
+    .content__container--categories {
+        margin-top: 100px;
+    }
+
+    .content__container--bgr-categories {
+        width: calc(100% + 160px);
+        height: calc(100% + 120px);
+    }
+
+}
+
+
+@media (max-width: 1023px) {
+    .content__container--boks-and-categories {
+        flex-direction: column;
+    }
+    .content__container--book-cards {
+        width: 100%;
+        margin-top: 50px;
+
+    }
+
+    .content__container--categories {
+        margin-top: 30px;
+
+    }
+
+    .content__container--bgr-categories {
+        width: calc(100%);
+        height: calc(100% + 40px);
+    }
+
+
+}
+
+/*iPad mini*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    
+    .content__container--book-cards {
+        row-gap: 30px;
+        min-height: 800px;
+    }
+    
+}
+
+/*iPhone 11 Pro Max */
+@media (min-width: 414px) and (max-width: 767px) {
+    
+    .content__container--book-cards {
+        row-gap: 30px;
+        min-height: 800px;
+    }
+    
+}
+
+/*iPhone SE */
+@media (min-width: 0px) and (max-width: 413px) {
+
+    
+}

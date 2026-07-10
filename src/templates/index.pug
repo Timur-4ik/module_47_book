@@ -1,0 +1,39 @@
+doctype html
+html(lang='ru')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport' content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    title Book Store
+    link(rel='stylesheet' href='../src/css/font.css')
+  body.body
+    header.header
+      include header.pug
+    main.content
+      .loader 
+        .animation
+      a.content__link(href='#')
+        .content__promo.content__promo--one
+          span.content__text.content__text--promo Change old book on new
+          <svg width="57" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 6.75928H54" stroke="#1C2A39" stroke-width="2"/>
+            <path d="M48 0.759277L55 6.75928L48 12.7593" stroke="#1C2A39" stroke-width="2"/>
+          </svg>
+
+      a.content__link(href='#')
+        .content__promo.content__promo--two
+          span.content__text.content__text--promo top 100 books 2022
+          <svg width="57" height="14" viewBox="0 0 57 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 6.75928H54" stroke="#1C2A39" stroke-width="2"/>
+            <path d="M48 0.759277L55 6.75928L48 12.7593" stroke="#1C2A39" stroke-width="2"/>
+          </svg>
+      .content__container.content__container--img-slider
+      .content__container.content__container--markers
+      .content__container.content__container--boks-and-categories
+        .content__container.content__container--categories
+          .content__container.content__container--bgr-categories
+          ul.content__categories
+        .content__container.content__container--book-cards
+
+
+

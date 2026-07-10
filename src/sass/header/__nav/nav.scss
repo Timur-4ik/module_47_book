@@ -1,0 +1,72 @@
+@use "../../var.scss";
+
+
+
+.header__list {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px
+}
+
+.header__btn-menu {
+    display: none;
+}
+
+.header__menu-icon {
+    display: none;
+}
+
+.header__icon {
+    fill: var.$text-color-black;
+}
+
+.header__item {
+    list-style: none;
+    
+}
+
+.header__item--active {
+    display: none;
+}
+
+
+
+@media (max-width: 1023px) {
+
+    .header__menu-icon {
+        display: flex;
+    }
+        
+   .header__list { 
+        display: none;
+        gap: 0px;
+        z-index: 10;
+    }
+
+    .header__item--active {
+        display: block;
+    }
+
+    .header__menu-icon:hover {
+        cursor: pointer;
+        transform: scale(2);
+    }
+
+    .header__btn-menu:checked ~ .header__list {
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        position: absolute;
+        opacity: 100%;
+        margin-left: -160px;
+        }
+
+
+    .header__btn-menu:checked ~ .header__menu-icon {
+        transform: scale(2);
+    }
+ 
+}

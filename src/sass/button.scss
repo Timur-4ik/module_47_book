@@ -1,0 +1,30 @@
+@use "var";
+
+.button {
+    width: 176px;
+    height: 45px;
+    color: var.$buttonColor;
+    border: 1px solid var.$buttonColor;
+    background-color: var.$buttonBckgColor;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+
+.button__book-cards {
+    width: 100%;
+    position: absolute;
+    top: 158px;
+    left: 0;
+}
+
+.button__book-cards--active {
+    color: var.$buttonColor-active;
+    border: 1px solid var.$buttonBorderColor-active;
+}
+
+.button__book-cards--not-sale {
+    border: 1px solid var.$buttonBorderColor--not-sale;
+    color: var.$buttonColor--not-sale;
+    cursor: default;
+}
